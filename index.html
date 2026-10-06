@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Hang Up — AI receptionist for small personal-injury law firms</title>
+<meta name="description" content="An AI receptionist for small personal-injury law firms in the Greater Toronto Area. Every call answered in English or Spanish, every intake captured, every morning triaged.">
+<meta property="og:title" content="No Hang Up — Voicemail is where calls go to die.">
+<meta property="og:description" content="An AI receptionist for small law firms. Every call answered, every intake captured, every morning triaged.">
+<meta property="og:url" content="https://nohangup.ca">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2314213D'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23F6F4EF' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--paper:#F6F4EF;--ink:#14213D;--soft:#3D4660;--muted:#5A6070;--rule:#D9D4C7;--brick:#B23A2B;--rose:#E8A598;--white:#FFFFFF;--serif:'Newsreader',Georgia,serif;--sans:'IBM Plex Sans',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--ink)}a:hover{color:var(--brick)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.label{font:500 13px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brick);margin:0 0 16px}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;padding:16px 28px;border-radius:2px}
+.btn:hover{background:var(--brick);color:var(--white)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
+header{border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:20px;padding-bottom:20px}
+.logo{font:600 26px/1 var(--serif);letter-spacing:-.01em;text-decoration:none}
+.navbtn{font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--ink);padding:10px 18px;border-radius:2px}
+.hero .wrap{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:88px;padding-bottom:80px}
+.hero-text{flex:999 1 520px;min-width:0}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.05;letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 em{color:var(--brick)}
+.sub{font-size:20px;color:var(--soft);margin:0 0 36px;max-width:560px}
+.card{background:var(--white);border:1px solid var(--rule);box-shadow:0 20px 40px -24px rgba(20,33,61,.35);padding:28px}
+.digest{flex:1 1 340px;min-width:0}
+.card-head{font:500 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#6B6F7A;display:flex;justify-content:space-between;border-bottom:1px solid #E8E4DA;padding-bottom:12px;margin-bottom:16px}
+.item{display:flex;gap:12px;font-size:15px;line-height:1.45;margin-top:14px}
+.item span{color:var(--muted)}
+.tag{font:500 11px/1.4 var(--mono);padding:3px 8px;height:fit-content;flex:none}
+.t-urgent{background:var(--brick);color:var(--white)}.t-new{background:var(--ink);color:var(--white)}.t-routine{background:#E8E4DA;color:var(--ink)}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .label{color:var(--rose)}
+.problem .wrap{display:flex;flex-wrap:wrap;gap:40px;padding-top:80px;padding-bottom:80px}
+.problem .label{flex:1 1 260px}
+.problem div{flex:999 1 560px;min-width:0}
+.problem .big{font:400 clamp(28px,4vw,38px)/1.25 var(--serif);margin:0 0 24px}
+.problem p{font-size:19px;color:#C9CDD8;margin:0}
+section.block{padding:88px 0}
+.block h2{font-size:clamp(32px,4.5vw,44px);line-height:1.1;margin-bottom:48px}
+.split{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.features{flex:999 1 520px;min-width:0;border-top:1px solid var(--ink)}
+.feature{padding:24px 0;border-bottom:1px solid var(--rule)}
+.feature h3{font-size:24px;margin-bottom:6px}
+.feature p{margin:0;color:var(--soft)}
+.chat{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:88%;padding:12px 16px;font-size:15px;line-height:1.45;border-radius:14px}
+.b-ai{align-self:flex-start;background:#EFEBE1;border-bottom-left-radius:3px}
+.b-caller{align-self:flex-end;background:var(--ink);color:var(--paper);border-bottom-right-radius:3px}
+.chat-note{font:500 12px/1.4 var(--mono);color:var(--brick);margin-top:6px;display:flex;align-items:center;gap:8px}
+.offer .wrap{display:flex;flex-wrap:wrap;gap:32px}
+.offer .card,.offer .dark{flex:1 1 420px;min-width:0;padding:40px}
+.price{font:400 clamp(44px,6vw,56px)/1 var(--serif)}
+.price small{font-size:20px;color:var(--muted)}
+.dark .price small,.dark p{color:#C9CDD8}
+.offer p{margin:20px 0 0;color:var(--soft)}
+.offer ul{margin:20px 0 0;padding:0;list-style:none}
+.offer li{padding:10px 0;border-top:1px solid #2D3A5A;color:#C9CDD8}
+.faq{border-top:1px solid var(--rule)}
+details{border-bottom:1px solid var(--rule)}
+summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font:400 22px/1.35 var(--serif);position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:4px;top:18px;font:400 28px/1 var(--sans);color:var(--brick)}
+details[open] summary::after{content:'–'}
+details p{margin:0 0 24px;color:var(--soft);max-width:760px}
+.faq-wrap{max-width:860px}
+.about .wrap{display:flex;flex-wrap:wrap;gap:40px;padding-top:88px;padding-bottom:88px}
+.about .label{flex:1 1 260px}
+.about div{flex:999 1 560px;min-width:0}
+.about blockquote{margin:0 0 20px;font:italic 400 clamp(26px,3.6vw,34px)/1.3 var(--serif)}
+.about .who{font:500 14px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--rose)}
+.cta{text-align:center;padding:88px 0}
+.cta h2{font-size:clamp(32px,4.5vw,44px);margin-bottom:28px}
+footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:15px;color:var(--muted)}
+@media (max-width:600px){.hero .wrap{padding-top:56px;padding-bottom:56px}section.block,.cta{padding:64px 0}.card,.offer .card,.offer .dark{padding:24px}.navbtn{padding:9px 14px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a class="logo" href="#top">No Hang Up</a>
+<a class="navbtn" href="mailto:marina@nohangup.ca?subject=No%20Hang%20Up%20demo">Request a demo</a>
+</div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+<div class="wrap">
+<div class="hero-text">
+<p class="label">For small personal-injury firms · Greater Toronto Area</p>
+<h1>Voicemail is where calls go to die. <em>We make every call count.</em></h1>
+<p class="sub">An AI receptionist for small law firms. Every call answered, every intake captured, every morning triaged.</p>
+<a class="btn" href="mailto:marina@nohangup.ca?subject=No%20Hang%20Up%20demo">Request a demo</a>
+</div>
+<div class="digest card" aria-label="Sample morning digest">
+<div class="card-head"><span>Morning digest · sample</span><span>7:00 AM</span></div>
+<div class="item"><b class="tag t-urgent">URGENT</b><div><strong>Rear-end collision, Highway 401</strong><br><span>Called 11:48 PM · neck and back pain · other driver's insurer already calling</span></div></div>
+<div class="item"><b class="tag t-new">NEW</b><div><strong>Slip and fall, grocery store</strong><br><span>Called 7:15 PM · in Spanish · wrist fracture · photos taken</span></div></div>
+<div class="item"><b class="tag t-routine">ROUTINE</b><div><strong>Existing client, file update</strong><br><span>Called 12:20 PM · wants a callback this week</span></div></div>
+</div>
+</div>
+</section>
+
+<section class="problem dark">
+<div class="wrap">
+<p class="label">01 — The problem</p>
+<div>
+<p class="big">Most callers never leave a voicemail. They hang up and call the next firm.</p>
+<p>After-hours, sick days, lunch hour, the 2 PM court rush — those calls are dying right now.</p>
+</div>
+</div>
+</section>
+
+<section class="block">
+<div class="wrap">
+<p class="label">02 — What you get</p>
+<h2>Thirty seconds to know who to call first.</h2>
+<div class="split">
+<div class="features">
+<div class="feature"><h3>Every call answered</h3><p>In English or Spanish, day and night.</p></div>
+<div class="feature"><h3>A structured intake, every time</h3><p>Name, number, what happened, injuries, other party.</p></div>
+<div class="feature"><h3>A triage digest each morning</h3><p>Urgent at the top, new intakes with full context, routine at the bottom.</p></div>
+</div>
+<div class="chat card" aria-label="Sample call in Spanish">
+<div class="card-head"><span>Sample call · 8:14 PM</span><span>English / Español</span></div>
+<div class="bubble b-ai">Thanks for calling the firm's answering service. How can I help tonight?</div>
+<div class="bubble b-caller">Hola, ¿habla español? Tuve un accidente hoy.</div>
+<div class="bubble b-ai">Claro que sí. Lo siento mucho. ¿Me puede decir su nombre y qué pasó?</div>
+<div class="chat-note"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Intake captured · in tomorrow's digest</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="offer" style="padding-bottom:88px">
+<div class="wrap">
+<div class="card">
+<p class="label">03 — How the pilot works</p>
+<div class="price">$97 <small>for 7 days</small></div>
+<p>Live on your lines, configured with your firm's name, intake questions, and escalation rules.</p>
+<p><strong>Money-back guarantee.</strong> If she's not earning her keep by day 7, full refund, no hard feelings.</p>
+<p>If you stay, the $97 is credited toward your first month — $400 remaining on $497 a month.</p>
+</div>
+<div class="dark">
+<p class="label">04 — Pricing</p>
+<div class="price">$497 <small>CAD / month, flat</small></div>
+<ul>
+<li>800 minutes included (roughly 250 calls)</li>
+<li>$0.60 per minute after that</li>
+<li>No setup fee for founding firms</li>
+<li>Month to month, no contracts</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="block" style="border-top:1px solid var(--rule)">
+<div class="wrap faq-wrap">
+<p class="label">05 — Questions</p>
+<h2>What lawyers ask first.</h2>
+<div class="faq">
+<details><summary>When does the AI answer?</summary><p>Whenever you want her to. Most firms set her as overflow + after-hours: she picks up when your line is busy, after a set number of rings, or when nobody answers — plus evenings, weekends, and holidays. You define the rules; she follows them.</p></details>
+<details><summary>What happens to my current receptionist?</summary><p>She stays. This isn't a replacement — it's her backup. Sick days, vacations, lunch hour: those calls get answered instead of dying in voicemail. And her mornings get easier, because every call arrives triaged instead of as a pile of sticky notes.</p></details>
+<details><summary>What does the caller experience?</summary><p>A natural phone conversation. She introduces herself as your firm's answering service, takes a structured intake, and handles routine questions. Urgent callers get escalated per your rules — including patching the call through to you.</p></details>
+<details><summary>What do I get each morning?</summary><p>A triage digest: urgent at the top, new intakes with full context, routine at the bottom. Thirty seconds to know who to call first.</p></details>
+<details><summary>What if she gets something wrong?</summary><p>She works from your intake script — same questions, same way, every time. Every call is logged and lands in your digest, so you see exactly what was captured.</p></details>
+<details><summary>Is my clients' information safe?</summary><p>Calls are handled under our privacy policy, and intake data goes only to you.</p></details>
+<details><summary>Does she speak Spanish?</summary><p>Yes — English and Spanish out of the box, more languages available.</p></details>
+<details><summary>How does the $97 pilot work?</summary><p>Seven days, live on your lines, configured with your firm's name, intake questions, and escalation rules. Money-back guarantee.</p></details>
+<details><summary>What does $497/month include?</summary><p>800 minutes (~250 calls), $0.60/min overage, no setup fee for founding firms, month to month.</p></details>
+<details><summary>Can she book consultations into my calendar?</summary><p>Yes, configurable during setup.</p></details>
+<details><summary>What if the service goes down?</summary><p>Your phones fall back to normal voicemail — exactly where you are today. You lose nothing.</p></details>
+</div>
+</div>
+</section>
+
+<section class="about dark">
+<div class="wrap">
+<p class="label">06 — About</p>
+<div>
+<blockquote>“I started No Hang Up because I'm the client that hangs up — if I reach voicemail, I'm calling the next firm.”</blockquote>
+<p class="who">Marina Mitchell · Founder · Toronto</p>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<h2>Hear her answer your own line.</h2>
+<a class="btn" href="mailto:marina@nohangup.ca?subject=No%20Hang%20Up%20demo">Request a demo</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+<span>© 2026 No Hang Up · Toronto, Ontario</span>
+<a href="mailto:marina@nohangup.ca">marina@nohangup.ca</a>
+</div>
+</footer>
+
+</body>
+</html>
