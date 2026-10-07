@@ -83,6 +83,15 @@ details p{margin:0 0 24px;color:var(--soft);max-width:760px}
 .cta{text-align:center;padding:88px 0}
 .cta h2{font-size:clamp(32px,4.5vw,44px);margin-bottom:28px}
 footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:15px;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.steps li::before{content:counter(s);font:500 14px/1.9 var(--mono);color:var(--brick);flex:none;width:24px}
+.steps h3{font-size:24px;margin-bottom:6px}
+.steps p{margin:0;color:var(--soft)}
+.keep{margin:32px 0 0;font:italic 400 clamp(20px,2.6vw,24px)/1.4 var(--serif)}
+.never{list-style:none;margin:0;padding:0;border-top:1px solid #2D3A5A}
+.never li{padding:16px 0 16px 32px;border-bottom:1px solid #2D3A5A;color:#C9CDD8;position:relative}
+.never li::before{content:'×';position:absolute;left:4px;top:13px;font:500 20px/1.4 var(--mono);color:var(--rose)}
 @media (max-width:600px){.hero .wrap{padding-top:56px;padding-bottom:56px}section.block,.cta{padding:64px 0}.card,.offer .card,.offer .dark{padding:24px}.navbtn{padding:9px 14px}}
 </style>
 </head>
@@ -145,17 +154,46 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 </div>
 </section>
 
+<section class="block" style="border-top:1px solid var(--rule)">
+<div class="wrap">
+<p class="label">03 — How it works</p>
+<h2>Four steps from yes to live.</h2>
+<ol class="steps">
+<li><div><h3>Say yes.</h3><p>We send you a payment link ($97) and a short setup form — takes 10 minutes.</p></div></li>
+<li><div><h3>We build it.</h3><p>Tuned to your firm: your greeting, your people, your urgency rules. Live within 5 business days.</p></div></li>
+<li><div><h3>You test it.</h3><p>You get a private line to call yourself — test it. Nothing touches your clients until you approve.</p></div></li>
+<li><div><h3>Go live.</h3><p>Forward your number to your new AI line (5 minutes — we send simple instructions). Your 7-day pilot starts the day your line goes live — never before.</p></div></li>
+</ol>
+<p class="keep">And she keeps getting better — tell us what to adjust, any time. Tuning is always free, forever.</p>
+</div>
+</section>
+
+<section class="problem dark">
+<div class="wrap">
+<p class="label">04 — What she'll never do</p>
+<div>
+<ul class="never">
+<li>Never give legal advice or guess what a case is worth</li>
+<li>Never quote fees</li>
+<li>Never patch a caller through to you live — she takes a detailed message instead</li>
+<li>Never promise a callback at a specific time</li>
+<li>Never share one caller's information with another caller</li>
+</ul>
+</div>
+</div>
+</section>
+
 <section class="offer" style="padding-bottom:88px">
 <div class="wrap">
 <div class="card">
-<p class="label">03 — How the pilot works</p>
+<p class="label">05 — How the pilot works</p>
 <div class="price">$97 <small>for 7 days</small></div>
 <p>Live on your lines, configured with your firm's name, intake questions, and escalation rules.</p>
 <p><strong>Money-back guarantee.</strong> If she's not earning her keep by day 7, full refund, no hard feelings.</p>
 <p>On day 8, if you stay, $400 is charged automatically — that's your first month's balance ($97 credited). Then $497/month, flat. Cancel anytime.</p>
 </div>
 <div class="dark">
-<p class="label">04 — Pricing</p>
+<p class="label">06 — Pricing</p>
 <div class="price">$497 <small>CAD / month, flat</small></div>
 <ul>
 <li>800 minutes included (roughly 250 calls)</li>
@@ -169,7 +207,7 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 
 <section class="block" style="border-top:1px solid var(--rule)">
 <div class="wrap faq-wrap">
-<p class="label">05 — Questions</p>
+<p class="label">07 — Questions</p>
 <h2>What lawyers ask first.</h2>
 <div class="faq">
 <details><summary>When does the AI answer?</summary><p>Whenever you want her to. Most firms set her as overflow + after-hours: she picks up when your line is busy, after a set number of rings, or when nobody answers — plus evenings, weekends, and holidays. You define the rules; she follows them.</p></details>
@@ -189,7 +227,7 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 
 <section class="about dark">
 <div class="wrap">
-<p class="label">06 — About</p>
+<p class="label">08 — About</p>
 <div>
 <blockquote>“I started No Hang Up because I'm the client that hangs up — if I reach voicemail, I'm calling the next firm.”</blockquote>
 <p class="who">Marina Mitchell · Founder · Toronto</p>
