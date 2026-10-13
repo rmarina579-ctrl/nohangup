@@ -23,6 +23,8 @@ a{color:var(--ink)}a:hover{color:var(--brick)}
 .label{font:500 13px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--brick);margin:0 0 16px}
 .btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;padding:16px 28px;border-radius:2px}
 .btn:hover{background:var(--brick);color:var(--white)}
+.btn.buy{background:var(--brick);color:var(--white);text-align:center;max-width:100%}
+.btn.buy:hover{background:var(--ink)}
 h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 header{border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:20px;padding-bottom:20px}
@@ -114,7 +116,13 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <p class="sub" style="margin-bottom:16px">You don't have a lead problem. You have a leak. We plug it.</p>
 <p class="sub" style="margin-bottom:16px">Every call answered. Every morning clear.</p>
 <p class="sub">Every call answered, every intake captured, every morning triaged.</p>
+<div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
 <a class="btn" href="tel:+13653890732">Hear her in action</a>
+<div style="max-width:340px">
+<a class="btn buy" href="https://buy.stripe.com/3cI4gAdhv3Smapk2Abe7m06">Start your 7-day pilot — $97 plus HST</a>
+<p style="font-size:14px;line-height:1.5;color:var(--muted);margin:10px 0 0">$400 CAD plus HST on day 8 if you stay ($97 credited to month one). Money-back guarantee. Cancel anytime.</p>
+</div>
+</div>
 <p class="sub" style="font-size:16px;margin:16px 0 0">Call +1 (365) 389-0732 — play the injured caller, in English or Spanish. Takes two minutes.</p>
 </div>
 <div class="digest card" aria-label="Sample morning digest">
@@ -208,6 +216,10 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <p>Live on your lines, configured with your firm's name, intake questions, and escalation rules.</p>
 <p><strong>Money-back guarantee.</strong> If she's not earning her keep by day 7, full refund, no hard feelings.</p>
 <p>On day 8, if you stay, $400 plus HST is charged automatically — that's your first month's balance ($97 credited). Then $497/month, plus HST. Cancel anytime.</p>
+<div style="margin-top:28px;max-width:340px">
+<a class="btn buy" href="https://buy.stripe.com/3cI4gAdhv3Smapk2Abe7m06">Start your 7-day pilot — $97 plus HST</a>
+<p style="font-size:14px;line-height:1.5;color:var(--muted);margin:10px 0 0">$400 CAD plus HST on day 8 if you stay ($97 credited to month one). Money-back guarantee. Cancel anytime.</p>
+</div>
 </div>
 <div class="dark">
 <p class="label">06 — Pricing</p>
