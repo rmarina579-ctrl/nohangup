@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>No Hang Up — AI receptionist for small personal-injury law firms</title>
-<meta name="description" content="An AI receptionist for small personal-injury law firms across Canada. Calls answered in English or Spanish when the Service is live (see Terms §9.2), every intake captured, every morning triaged.">
+<meta name="description" content="No Hang Up — AI receptionist for small personal-injury law firms. Calls answered and logged, mornings clear.">
 <meta property="og:title" content="No Hang Up — Mornings with answers, not anxiety.">
-<meta property="og:description" content="Mornings with answers, not anxiety. Calls answered when the Service is live — see Terms §9.2. Every morning clear.">
+<meta property="og:description" content="Mornings with answers, not anxiety. Calls answered and logged. Every morning clear.">
 <meta property="og:url" content="https://nohangup.ca">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2314213D'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23F6F4EF' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
@@ -25,6 +25,11 @@ a{color:var(--ink)}a:hover{color:var(--brick)}
 .btn:hover{background:var(--brick);color:var(--white)}
 .btn.buy{background:var(--brick);color:var(--white);text-align:center;max-width:100%}
 .btn.buy:hover{background:var(--ink)}
+button.btn{border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn.buy:disabled{opacity:.45;cursor:not-allowed;background:var(--brick)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--ink);margin:0 0 12px;cursor:pointer}
+.agree input{width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:var(--brick)}
+.dark .agree,.dark .agree a{color:var(--paper)}
 h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0}
 header{border-bottom:1px solid var(--rule)}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:20px;padding-bottom:20px}
@@ -114,12 +119,13 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <p class="label">An AI receptionist for small personal-injury law firms.</p>
 <h1>Mornings with answers, not anxiety.</h1>
 <p class="sub" style="margin-bottom:16px">You don't have a lead problem. You have a leak. We plug it.</p>
-<p class="sub" style="margin-bottom:16px">Calls answered when the Service is live — see Terms §9.2. Every morning clear.</p>
-<p class="sub">Calls answered when the Service is live, every intake captured, every morning triaged — see Terms §9.2; no guarantee every call will be answered.</p>
+<p class="sub" style="margin-bottom:16px">Calls answered. Every morning clear.</p>
+<p class="sub">Calls answered by the Service and logged by Retell AI land in your morning Digest, triaged. See <a href="/terms">Terms §9.2</a>.</p>
 <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
 <a class="btn" href="tel:+13653890732">Hear her in action</a>
 <div style="max-width:340px">
-<a class="btn buy" href="https://buy.stripe.com/9B69AU5P34Wq694dePe7m07">Start your 7-day pilot — $97 (plus HST when applicable — no HST collected until No Hang Up is HST-registered)</a>
+<label class="agree"><input type="checkbox" class="agree-box" id="agree-1"> <span>I agree to the <a href="/terms">Terms and Conditions</a> and <a href="/privacy">Privacy Policy</a></span></label>
+<button type="button" class="btn buy" data-href="https://buy.stripe.com/9B69AU5P34Wq694dePe7m07" disabled aria-describedby="agree-1">Start your 7-day pilot — $97 (plus HST when applicable — no HST collected until No Hang Up is HST-registered)</button>
 <p style="font-size:14px;line-height:1.5;color:var(--muted);margin:10px 0 0">$400 CAD (plus HST when applicable) on day 8 if you stay ($97 credited to month one). Money-back guarantee. Cancel anytime.</p>
 <p style="font-size:14px;line-height:1.5;color:var(--muted);margin:4px 0 0">Cancel by end of day 7 for a full refund.</p>
 </div>
@@ -165,7 +171,7 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <h2>Thirty seconds to know who to call first.</h2>
 <div class="split">
 <div class="features">
-<div class="feature"><h3>Calls answered when the Service is live</h3><p>In English or Spanish, day and night. See Terms §9.2 — no guarantee every call will be answered.</p></div>
+<div class="feature"><h3>Calls answered and logged</h3><p>In English or Spanish, day and night. Calls answered by the Service and logged by Retell AI appear in your Digest. See <a href="/terms">Terms §9.2</a>.</p></div>
 <div class="feature"><h3>A structured intake, every time</h3><p>Name, number, what happened, injuries, other party.</p></div>
 <div class="feature"><h3>A triage digest each morning</h3><p>Urgent at the top, new intakes with full context, routine at the bottom.</p></div>
 </div>
@@ -218,7 +224,8 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <p><strong>Money-back guarantee.</strong> If she's not earning her keep by day 7, full refund, no hard feelings.</p>
 <p>On day 8, if you stay, $400 (plus HST when applicable) is charged automatically — that's your first month's balance ($97 credited). Then $497/month (plus HST when applicable). Cancel anytime.</p>
 <div style="margin-top:28px;max-width:340px">
-<a class="btn buy" href="https://buy.stripe.com/9B69AU5P34Wq694dePe7m07">Start your 7-day pilot — $97 (plus HST when applicable — no HST collected until No Hang Up is HST-registered)</a>
+<label class="agree"><input type="checkbox" class="agree-box" id="agree-2"> <span>I agree to the <a href="/terms">Terms and Conditions</a> and <a href="/privacy">Privacy Policy</a></span></label>
+<button type="button" class="btn buy" data-href="https://buy.stripe.com/9B69AU5P34Wq694dePe7m07" disabled aria-describedby="agree-2">Start your 7-day pilot — $97 (plus HST when applicable — no HST collected until No Hang Up is HST-registered)</button>
 <p style="font-size:14px;line-height:1.5;color:var(--muted);margin:10px 0 0">$400 CAD (plus HST when applicable) on day 8 if you stay ($97 credited to month one). Money-back guarantee. Cancel anytime.</p>
 <p style="font-size:14px;line-height:1.5;color:var(--muted);margin:4px 0 0">Cancel by end of day 7 for a full refund.</p>
 </div>
@@ -242,11 +249,11 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <h2>What lawyers ask first.</h2>
 <div class="faq">
 <details><summary>When does the AI answer?</summary><p>Whenever you want her to. Most firms set her as overflow + after-hours: she picks up when your line is busy, after a set number of rings, or when nobody answers — plus evenings, weekends, and holidays. You define the rules; she follows them.</p></details>
-<details><summary>What happens to my current receptionist?</summary><p>She stays. This isn't a replacement — it's her backup. Sick days, vacations, lunch hour: those calls get answered instead of dying in voicemail. And her mornings get easier, because every call arrives triaged instead of as a pile of sticky notes.</p></details>
-<details><summary>What does the caller experience?</summary><p>A natural phone conversation. She introduces herself as your firm's answering service, takes a structured intake, and handles routine questions. If the caller needs a lawyer urgently, she flags it at the top of your morning digest, per your rules. She flags urgent calls at the top of your morning digest, and can send alerts by email, and by text if set up before go-live.</p></details>
+<details><summary>What happens to my current receptionist?</summary><p>She stays. This isn't a replacement — it's her backup. Sick days, vacations, lunch hour: those calls get answered instead of dying in voicemail. And her mornings get easier, because calls arrive triaged instead of as a pile of sticky notes.</p></details>
+<details><summary>What does the caller experience?</summary><p>A natural phone conversation. She introduces herself as your firm's answering service, takes a structured intake, and handles routine questions. She flags urgent calls at the top of your morning Digest, per your rules, and sends alerts by email — and by text if text alerts are chosen in Schedule A and set up for you before go-live.</p></details>
 <details><summary>What do I get each morning?</summary><p>A triage digest: urgent at the top, new intakes with full context, routine at the bottom. Thirty seconds to know who to call first.</p></details>
-<details><summary>What if she gets something wrong?</summary><p>She works from your intake script — same questions, same way, every time. Every call is logged and lands in your digest, so you see exactly what was captured.</p></details>
-<details><summary>Is my clients' information safe?</summary><p>Intake data goes to you and to the providers listed in our privacy policy (voice AI, email, payments) — never sold. No Hang Up never uses identifiable information to train AI models. Retell AI may use de-identified, aggregated call data to develop, train, and improve its models — see Privacy Policy §4-§5 for details and Retell's terms. Read the full policy at <a href="/privacy">nohangup.ca/privacy</a>. We're happy to walk through our data handling on a call before you sign anything.</p></details>
+<details><summary>What if she gets something wrong?</summary><p>She works from your intake script — same questions, same way, every time. Every call answered by the Service and logged by Retell AI appears in your Digest, so you see exactly what was captured.</p></details>
+<details><summary>Is my clients' information safe?</summary><p>Intake data goes to you and to the providers listed in our <a href="/privacy">Privacy Policy</a> (voice AI, email, payments) — never sold. No Hang Up never uses identifiable information to train AI models. Retell AI may use de-identified, aggregated call data to develop, train, and improve its AI models. See <a href="/privacy">Privacy Policy §4–§5</a> and <a href="https://www.retellai.com/legal/terms-of-service">Retell AI's Terms</a>. Read the full policy at <a href="/privacy">nohangup.ca/privacy</a>. We're happy to walk through our data handling on a call before you sign anything.</p></details>
 <details><summary>Does she speak Spanish?</summary><p>Yes — English and Spanish out of the box, more languages available.</p></details>
 <details><summary>How does the $97 pilot work?</summary><p>Seven days, up to 150 minutes, live on your lines. If she's not earning her keep by day 7, you get the $97 back — no forms, no hard feelings. If you stay, $400 (plus HST when applicable) is charged automatically on day 8 (your first month's balance), then $497/month (plus HST when applicable).</p></details>
 <details><summary>What does $497/month include?</summary><p>500 minutes (~150 calls), $0.60/min overage, no setup fee for founding firms, month to month.</p></details>
@@ -278,9 +285,17 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:32px;padding-bottom:48
 <footer>
 <div class="wrap">
 <span>© 2026 No Hang Up · Toronto, Ontario</span>
-<span><a href="/privacy">Privacy Policy</a> · <a href="mailto:marina@nohangup.ca">marina@nohangup.ca</a></span>
+<span><a href="/terms">Terms and Conditions</a> · <a href="/privacy">Privacy Policy</a> · <a href="mailto:support@nohangup.ca">support@nohangup.ca</a></span>
 </div>
 </footer>
 
+<script>
+document.querySelectorAll('.agree-box').forEach(function(box){
+  var btn=document.querySelector('[aria-describedby="'+box.id+'"]');
+  box.checked=false;btn.disabled=true;
+  box.addEventListener('change',function(){btn.disabled=!box.checked;});
+  btn.addEventListener('click',function(){if(box.checked&&!btn.disabled){window.location.href=btn.getAttribute('data-href');}});
+});
+</script>
 </body>
 </html>
